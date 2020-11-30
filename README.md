@@ -24,6 +24,9 @@ Example:
     "line_end" : '</span>',
 },
 ```
+Then run `scraper.py`. The data files will be generated in `data/<name>.csv`
+
+Update `code.R` with the name of the CSV file to visualize, and the title. 
 
 ## Shows
 ### South Park
