@@ -78,7 +78,7 @@ def main():
         transformed = transform_data(all_seasons)
         write_csv(transformed, showConfig['data_file_name'])
 
-    print('\nDone!')
+    print('Done!\n')
 
 if __name__ == '__main__':
     main()
