@@ -5,34 +5,25 @@
 ### Combined (9 popular shows with 10+ seasons)
 ![combined](/plots/combined.png)
 
-### South Park
+### Individual shows
 ![South Park Episode Ratings](/plots/SouthPark.png)
 
-### Pokemon
-![Pokemon Episode Ratings](/plots/Pokemon.png)
+![Pokemon Episode Ratings](/plots/pokemon.png)
 
-### The Simpsons
 ![The Simpsons Episode Ratings](/plots/TheSimpsons.png)
 
-### Family Guy
 ![Family Guys Episode Ratings](/plots/FamilyGuy.png)
 
-### Grey's Anatomy
 ![Grey's Anatomy Episode Ratings](/plots/GreysAnatomy.png)
 
-### Bob's Burgers
 ![Bob's Burgers Episode Ratings](/plots/BobsBurgers.png)
 
-### Friends
-![Friends Episode Ratings](/plots/Friends.png)
+![Friends Episode Ratings](/plots/friends.png)
 
-### It's Always Sunny in Philadelphia
-![It's Always Sunny in Philadelphia Episode Ratings](/plots/ItsAlwaysSunnyinPhiladelphia.png)
+![It's Always Sunny in Philadelphia Episode Ratings](/plots/ItsAlwaysSunnyInPhiladelphia.png)
 
-### The Walking Dead
 ![The Walking Dead Episode Ratings](/plots/TheWalkingDead.png)
 
-### SpongeBob SquarePants
 ![SpongeBob SquarePants Episode Ratings](/plots/SpongeBobSquarePants.png)
 
 ## How to get data for a show
