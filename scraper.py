@@ -1,11 +1,6 @@
 import csv
 import requests
-
-NUM_SEASONS = 24
-BASE_URL = 'https://www.imdb.com/title/tt0121955/episodes?season='
-LINE_SEARCH = '<div class="ipl-rating-star small">'
-LINE_START ='<span class="ipl-rating-star__rating">'
-LINE_END = '</span>'
+from scraper_configs import *  
 
 
 def get_html(url):
@@ -17,7 +12,7 @@ def get_html(url):
   return html
 
 
-def parse_html(html):
+def parse_html(html, showConfig):
     """ Parses the input HTML for episode ratings"""
 
     lines = html.split('\n')
@@ -25,10 +20,10 @@ def parse_html(html):
     data = []
     start_search = False
     for line in lines:
-        if LINE_SEARCH in line:
+        if showConfig['line_search'] in line:
             start_search = True
-        if LINE_START in line and start_search:
-            rating = line.split(LINE_START)[1].split(LINE_END)[0]
+        if showConfig['line_start'] in line and start_search:
+            rating = line.split(showConfig['line_start'])[1].split(showConfig['line_end'])[0]
             data.append(rating)
             start_search = False
 
@@ -50,29 +45,40 @@ def transform_data(data):
     return transformed
 
 
-def write_csv(data):
+def write_csv(data, filename):
     """ Writes a CSV file of the ratings data """
 
-    with open('data.csv', 'w') as file:
+    with open('data/' + filename + '.csv', 'w') as file:
         writer = csv.DictWriter(file, fieldnames=['season','episode','rating'])                                               
         writer.writeheader()
         for row in data:
             writer.writerow(row)
 
 
-def main():
+
+def process_show(showConfig):
+    """ For each show, scrape the websites and get the ratings for each season, for each episode """
+
     all_seasons = {}
-    for i in range(1, NUM_SEASONS + 1):
-        print('Processing season: ' + str(i))
-        url = BASE_URL + str(i)
+    for i in range(1, showConfig['num_seasons'] + 1):
+        print("\tProcessing Seasion " + str(i))
+        url = showConfig['imdb_url'] + str(i)
         html = get_html(url)
-        data = parse_html(html)
+        data = parse_html(html, showConfig)
         all_seasons[i] = data
+    
+    return all_seasons
 
-    transformed = transform_data(all_seasons)
-    write_csv(transformed)
+
+def main():
+    for showConfig in CONFIGS:
+        print("Processing " + showConfig['show'] + "...")
+        all_seasons = process_show(showConfig)
+
+        transformed = transform_data(all_seasons)
+        write_csv(transformed, showConfig['data_file_name'])
+
     print('\nDone!')
-
 
 if __name__ == '__main__':
     main()
