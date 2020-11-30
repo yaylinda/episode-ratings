@@ -1,8 +1,8 @@
 setwd("~/Developer/southpark-episode-ratings")
 library(ggplot2)
 
-data = read.csv('data/pokemon.csv')
-title = "Pokemon"
+data = read.csv('data/iasip.csv')
+title = "It's Alway Sunny in Philadelphia"
 
 
 ggplot(data, aes(x = as.factor(season), y = factor(episode, levels = rev(sort(unique(episode)))), fill = rating)) + 

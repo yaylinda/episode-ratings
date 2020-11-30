@@ -35,14 +35,41 @@ CONFIGS = [
     #     "line_end" : '</span>',
     #     "data_file_name" : "familyguy"
     # },
+    # {
+    #     "show": "Pokemon",
+    #     "imdb_url" : "https://www.imdb.com/title/tt0168366/episodes?season=",
+    #     "num_seasons" : 23,
+    #     "line_search" : '<div class="ipl-rating-star small">',
+    #     "line_start" : '<span class="ipl-rating-star__rating">',
+    #     "line_end" : '</span>',
+    #     "data_file_name" : "pokemon"
+    # },
+    # {
+    #     "show": "Friends",
+    #     "imdb_url" : "https://www.imdb.com/title/tt0108778/episodes?season=",
+    #     "num_seasons" : 10,
+    #     "line_search" : '<div class="ipl-rating-star small">',
+    #     "line_start" : '<span class="ipl-rating-star__rating">',
+    #     "line_end" : '</span>',
+    #     "data_file_name" : "friends"
+    # },
+    # {
+    #     "show": "Bob's Burgers",
+    #     "imdb_url" : "https://www.imdb.com/title/tt1561755/episodes?season=",
+    #     "num_seasons" : 11,
+    #     "line_search" : '<div class="ipl-rating-star small">',
+    #     "line_start" : '<span class="ipl-rating-star__rating">',
+    #     "line_end" : '</span>',
+    #     "data_file_name" : "bobsburgers"
+    # },
     {
-        "show": "Pokemon",
-        "imdb_url" : "https://www.imdb.com/title/tt0168366/episodes?season=",
-        "num_seasons" : 23,
+        "show": "It's Always Sunny in Philadelphia",
+        "imdb_url" : "https://www.imdb.com/title/tt0472954/episodes?season=",
+        "num_seasons" : 15,
         "line_search" : '<div class="ipl-rating-star small">',
         "line_start" : '<span class="ipl-rating-star__rating">',
         "line_end" : '</span>',
-        "data_file_name" : "pokemon"
+        "data_file_name" : "iasip"
     },
 
 
