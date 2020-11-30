@@ -1,8 +1,8 @@
 setwd("~/Developer/southpark-episode-ratings")
 library(ggplot2)
 
-data = read.csv('data/southpark.csv')
-title = "South Episode Ratings"
+data = read.csv('data/familyguy.csv')
+title = "Family Guy Ratings"
 
 
 ggplot(data, aes(x = as.factor(season), y = factor(episode, levels = rev(sort(unique(episode)))), fill = rating)) + 
