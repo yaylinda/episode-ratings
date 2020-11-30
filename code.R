@@ -1,5 +1,6 @@
 setwd("~/Developer/episode-ratings")
 library(ggplot2)
+library(reshape)
 
 #==============================================================================
 # CONSTANTS
@@ -170,7 +171,7 @@ do_one_plot = function(data, title, height = 10, width = 10) {
   )
   
   ggsave(
-    paste(title, ".png", sep = ""), 
+    paste(gsub("'", "", gsub(" ", "", title, fixed = TRUE)), ".png", sep = ""), 
     path = PLOT_SAVE_PATH,
     dpi = 320,
     width = width,
