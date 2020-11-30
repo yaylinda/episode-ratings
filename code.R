@@ -1,7 +1,9 @@
 setwd("~/Developer/southpark-episode-ratings")
 library(ggplot2)
 
-data = read.csv('data.csv')
+data = read.csv('data/southpark.csv')
+title = "South Episode Ratings"
+
 
 ggplot(data, aes(x = as.factor(season), y = factor(episode, levels = rev(sort(unique(episode)))), fill = rating)) + 
   geom_tile(color = "white") + 
@@ -10,7 +12,7 @@ ggplot(data, aes(x = as.factor(season), y = factor(episode, levels = rev(sort(un
   labs(
     x = "Season",
     y = "Episode",
-    title = "South Park Episode Ratings",
+    title = title,
     subtitle = "From IMDb User Ratings",
     caption = "Visualization by @yaylinda",
     fill = "Rating"
