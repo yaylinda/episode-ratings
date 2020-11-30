@@ -1,14 +1,18 @@
 setwd("~/Developer/episode-ratings")
 library(ggplot2)
 library(reshape)
+library(scales)
 
 #==============================================================================
 # CONSTANTS
 #==============================================================================
-LOW_COLOR = "#b0f2bc"
-MID_COLOR = "#4cc8a3"
-HIGH_COLOR = "#257d98"
-#b0f2bc,#89e8ac,#67dba5,#4cc8a3,#38b2a5,#2c98a0,#257d98
+# LOW_COLOR = "#f9ddda"
+# HIGH_COLOR = "#573b88"
+LOW_COLOR = "red"
+HIGH_COLOR = "green"
+#f7feae,#b7e6a5,#7ccba2,#46aea0,#089099,#00718b,#045275
+#f9ddda,#f2b9c4,#e597b9,#ce78b3,#ad5fad,#834ba0,#573b88
+#d3f2a3,#97e196,#6cc08b,#4c9b82,#217a79,#105965,#074050
 
 PLOT_SAVE_PATH = "~/Developer/episode-ratings/plots"
 
@@ -107,7 +111,12 @@ do_facet_plot = function(data, title, subtitle) {
     ncol = 3,
   ) +
   geom_tile(color = "white") + 
-  scale_fill_gradient(low = LOW_COLOR, high = HIGH_COLOR) + 
+  scale_fill_gradient2(
+    low = muted("red"), 
+    mid = "white", 
+    high = muted("green"), 
+    midpoint = median(data$rating)
+  ) + 
   labs(
     x = "Season",
     y = "Episode",
@@ -128,7 +137,7 @@ do_facet_plot = function(data, title, subtitle) {
   )
   
   ggsave(
-    "combined.png", 
+    "combined.png",
     path = PLOT_SAVE_PATH,
     dpi = 320,
     width = 17,
@@ -151,7 +160,12 @@ do_one_plot = function(data, title, height = 10, width = 10) {
     )
   ) + 
   geom_tile(color = "white") + 
-  scale_fill_gradient(low = LOW_COLOR, high = HIGH_COLOR) + 
+  scale_fill_gradient2(
+    low = muted("red"), 
+    mid = "white", 
+    high = muted("green"), 
+    midpoint = median(data$rating)
+  ) + 
   coord_equal(ratio = 1) + 
   labs(
     x = "Season",
