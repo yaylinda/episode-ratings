@@ -3,6 +3,9 @@
 ## South Park
 ![South Park Episode Ratings](/plots/southpark.png)
 
+## Pokemon
+![Pokemon Episode Ratings](/plots/pokemon.png)
+
 ## The Simpsons
 ![The Simpsons Episode Ratings](/plots/simpsons.png)
 
