@@ -1,7 +1,29 @@
 # Episode Ratings
 
-## How to plot a show
-TODO
+## How to get data for a show
+Put a new entry in the `CONFIGS` array, in `scraper_configs.py`, for the show.
+
+Example: 
+```
+{
+    # Title of the show
+    "show": "It's Always Sunny in Philadelphia",
+    
+    # URL of the IMDB seasons/episodes list (note: do not copy+paste the actual season param value here)
+    "imdb_url" : "https://www.imdb.com/title/tt0472954/episodes?season=",
+    
+    # Number of seasons of the show
+    "num_seasons" : 15,
+    
+    # The name of the output data file. Will be saved in `data/<name>.csv`
+    "data_file_name" : "iasip",
+    
+    # These three lines are used for paring and should NOT be modified, unless something goes wrong
+    "line_search" : '<div class="ipl-rating-star small">',
+    "line_start" : '<span class="ipl-rating-star__rating">',
+    "line_end" : '</span>',
+},
+```
 
 ## Shows
 ### South Park
