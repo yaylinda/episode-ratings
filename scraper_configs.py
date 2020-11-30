@@ -26,14 +26,23 @@ CONFIGS = [
     #     "line_end" : '</span>',
     #     "data_file_name" : "greysanatomy"
     # },
+    # {
+    #     "show": "Family Guy",
+    #     "imdb_url" : "https://www.imdb.com/title/tt0182576/episodes?season=",
+    #     "num_seasons" : 21,
+    #     "line_search" : '<div class="ipl-rating-star small">',
+    #     "line_start" : '<span class="ipl-rating-star__rating">',
+    #     "line_end" : '</span>',
+    #     "data_file_name" : "familyguy"
+    # },
     {
-        "show": "Family Guy",
-        "imdb_url" : "https://www.imdb.com/title/tt0182576/episodes?season=",
-        "num_seasons" : 21,
+        "show": "Pokemon",
+        "imdb_url" : "https://www.imdb.com/title/tt0168366/episodes?season=",
+        "num_seasons" : 23,
         "line_search" : '<div class="ipl-rating-star small">',
         "line_start" : '<span class="ipl-rating-star__rating">',
         "line_end" : '</span>',
-        "data_file_name" : "familyguy"
+        "data_file_name" : "pokemon"
     },
 
 
