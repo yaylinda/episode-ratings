@@ -89,7 +89,7 @@ do_one_plot(pokemon, "Pokemon", height = 12, width = 12)
 #==============================================================================
 
 #--------------------------------------
-# Plot combined data with facet_wrap
+# Plot and save combined data with facet_wrap
 #--------------------------------------
 do_facet_plot = function(data, title, subtitle) {
   ggplot(
@@ -138,7 +138,7 @@ do_facet_plot = function(data, title, subtitle) {
 }
 
 #--------------------------------------
-# Plot one dataset (one TV show)
+# Plot and save one dataset (one TV show)
 #--------------------------------------
 do_one_plot = function(data, title, height = 10, width = 10) {
   ggplot(
