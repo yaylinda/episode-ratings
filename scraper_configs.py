@@ -89,23 +89,32 @@ CONFIGS = [
     #     "line_end" : '</span>',
     #     "data_file_name" : "thewalkingdead"
     # },
+    # {
+    #     "show": "The Bachelor",
+    #     "imdb_url" : "https://www.imdb.com/title/tt0313038/episodes?season=",
+    #     "num_seasons" : 24,
+    #     "line_search" : '<div class="ipl-rating-star small">',
+    #     "line_start" : '<span class="ipl-rating-star__rating">',
+    #     "line_end" : '</span>',
+    #     "data_file_name" : "thebachelor"
+    # },
+    # {
+    #     "show": "The Bachelorette",
+    #     "imdb_url" : "https://www.imdb.com/title/tt0348894/episodes?season=",
+    #     "num_seasons" : 15,
+    #     "line_search" : '<div class="ipl-rating-star small">',
+    #     "line_start" : '<span class="ipl-rating-star__rating">',
+    #     "line_end" : '</span>',
+    #     "data_file_name" : "thebachelorette"
+    # },
     {
-        "show": "The Bachelor",
-        "imdb_url" : "https://www.imdb.com/title/tt0313038/episodes?season=",
-        "num_seasons" : 24,
+        "show": "Shameless",
+        "imdb_url" : "https://www.imdb.com/title/tt1586680/episodes?season=",
+        "num_seasons" : 11,
         "line_search" : '<div class="ipl-rating-star small">',
         "line_start" : '<span class="ipl-rating-star__rating">',
         "line_end" : '</span>',
-        "data_file_name" : "thebachelor"
-    },
-    {
-        "show": "The Bachelorette",
-        "imdb_url" : "https://www.imdb.com/title/tt0348894/episodes?season=",
-        "num_seasons" : 15,
-        "line_search" : '<div class="ipl-rating-star small">',
-        "line_start" : '<span class="ipl-rating-star__rating">',
-        "line_end" : '</span>',
-        "data_file_name" : "thebachelorette"
+        "data_file_name" : "shameless"
     },
 
     # TODO - Add more configirations for more shows

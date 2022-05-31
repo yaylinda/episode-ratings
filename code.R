@@ -42,11 +42,14 @@ PLOT_SAVE_PATH = "~/Developer/episode-ratings/plots"
 # thewalkingdead = read.csv('data/thewalkingdead.csv')
 # thewalkingdead$name = "The Walking Dead"
 
-thebachelor = read.csv('data/thebachelor.csv')
-thebachelor$name = "The Bachelor (2002-2020)"
+# thebachelor = read.csv('data/thebachelor.csv')
+# thebachelor$name = "The Bachelor (2002-2020)"
+# 
+# thebachelorette = read.csv('data/thebachelorette.csv')
+# thebachelorette$name = "The Bachelorette (2003-2019)"
 
-thebachelorette = read.csv('data/thebachelorette.csv')
-thebachelorette$name = "The Bachelorette (2003-2019)"
+shameless = read.csv('data/shameless.csv')
+shameless$name = "Shameless"
 
 #==============================================================================
 # HELPER FUNCTIONS
@@ -187,18 +190,25 @@ do_one_plot = function(data, title, height = 10, width = 10, doSave=TRUE) {
 #==============================================================================
 
 # Combine the data (just picking 9 from the above)
+# combined = do.call(
+#   "rbind", 
+#   list(
+#     bobsburgers, 
+#     familyguy, 
+#     friends, 
+#     greysanatomy, 
+#     iasip, 
+#     thewalkingdead, 
+#     simpsons, 
+#     southpark, 
+#     spongebob
+#   )
+# )
+
 combined = do.call(
   "rbind", 
   list(
-    bobsburgers, 
-    familyguy, 
-    friends, 
-    greysanatomy, 
-    iasip, 
-    thewalkingdead, 
-    simpsons, 
-    southpark, 
-    spongebob
+    shameless
   )
 )
 
